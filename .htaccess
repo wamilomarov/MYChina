@@ -1,0 +1,16 @@
+#order deny,allow
+#deny from all
+#allow from 81.17.164.178 141.101.80.49
+AddDefaultCharset utf-8
+
+php_flag display_errors on
+php_value error_reporting 7
+
+FileETag MTime Size
+<ifmodule mod_expires.c>
+    <filesmatch ".(jpg|jpeg|gif|png|ico|css|js)$">
+        ExpiresActive on
+        ExpiresDefault "access plus 7 day"
+    </filesmatch>
+</ifmodule>
+
